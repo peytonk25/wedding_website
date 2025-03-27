@@ -14,7 +14,7 @@ type DropContentProps = {
 
 const DropContent = ({text}: DropContentProps) => {
     return (
-        <GBox pad='medium'>
+        <GBox pad='medium' background={'#bbbbbb'} round={{size: 'xsmall', corner: 'bottom'}}>
             <GText>{text}</GText>
         </GBox>
     )
@@ -26,8 +26,8 @@ export const FAQ = ({headerTheme, textTheme, headerText, dropText}: HeaderProps)
 
     return (
         <Grommet theme={headerTheme} margin={{top: 'medium'}}>
-            <GBox align='center' width='large' margin={{top: 'xsmall'}} onClick={() => setOpen(!open)}>
-                <GBox fill='horizontal' round='xsmall' border='all' pad='xsmall'>
+            <GBox focusIndicator={false} align='center' width='large' margin={{top: 'xsmall'}} onClick={() => setOpen(!open)}>
+                <GBox fill='horizontal' round='xsmall' border={{color: 'red', side: 'all'}} pad='xsmall'>
                     {headerText}
                 </GBox>
                 {open ? (
